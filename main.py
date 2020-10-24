@@ -52,12 +52,12 @@ def data_transaksi():
     return jsonify(json)
 
 
-@app.route('/data-simpanan', methods=['POST'])
+@app.route('api/data-simpanan', methods=['POST'])
 def data_simpanan():
     status_code = 0
     message = 'Berhasil'
 
-    id_jenis = ''
+    id_jenis = request.form.get('id')
 
     if id_jenis == '1':
         ar = []
